@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanghoon & Namiri</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="모바일 청첩장 샘플" />
+  <meta property="og:description" content="두 사람의 소중한 날에 함께 해주세요." />
+  <meta property="og:image" content="https://yourdomain.com/images/og_img.png" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta http-equiv="Permissions-Policy" content="autoplay=(self)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Castoro+Titling&family=Explora&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- 언어 스위치 -->
+    <section id="lang-switch">
+      <button id="lang-toggle-btn">
+        <img id="lang-toggle-icon" src="images/lang_ja.svg" alt="언어 전환" />
+      </button>
+    </section>
+    <div class="section-divider"></div>
+    <!-- 인트로(커버) -->
+    <section id="intro">
+      <div class="date-row">
+        <span id="date">2025. 10. 12. SUN</span>
+        <!-- <span id="time">14:00 PM</span> -->
+      </div>
+      <img src="images/intro.jpg" alt="커버 이미지" class="cover-img" />
+      <div id="intro_content">
+        <img src="images/tori.png" class="intro-img"/>
+        <p id="intro_quote"></p>
+        <p id="intro_quote_author"></p></br>
+        <p id="intro_1"></p>
+        <p id="intro_2"></p>
+        <p id="intro_3"></p>
+        <p id="intro_4"></p>
+        <p id="intro_5"></p> 
+      </div>
+      <div class="couple-names">
+        <div class="groom-name-wrap">
+          <span id="groom_name_title"></span>
+          <span id="groom_name"></span>
+        </div>
+        <span class="divider">·</span>
+        <div class="bride-name-wrap">
+          <span id="bride_name_title"></span>
+          <span id="bride_name"></span>
+        </div>
+      </div>
+    </section>
+    <!-- 캘린더 -->
+    <section id="calendar">
+      <div class="calendar-header">
+        <h1 class="calendar-header-title">Calendar</h1>
+        <h1 class="calendar-header-date">2025. 10. 12. </h1>
+        <h1 class="calendar-header-time" id="calendar-header-time">14:00</h1>
+      </div>
+      <div class="calendar-grid">
+        <div class="calendar-weekend">SUN</div>
+        <div class="calendar-weekday">MON</div>
+        <div class="calendar-weekday">TUE</div>
+        <div class="calendar-weekday">WED</div>
+        <div class="calendar-weekday">THU</div>
+        <div class="calendar-weekday">FRI</div>
+        <div class="calendar-weekday">SAT</div>
+        <div class="calendar-cell empty"></div>
+        <div class="calendar-cell empty"></div>
+        <div class="calendar-cell empty"></div>
+        <div class="calendar-cell">1</div>
+        <div class="calendar-cell">2</div>
+        <div class="calendar-cell">3</div>
+        <div class="calendar-cell">4</div>
+        <div class="calendar-cell">5</div>
+        <div class="calendar-cell">6</div>
+        <div class="calendar-cell">7</div>
+        <div class="calendar-cell">8</div>
+        <div class="calendar-cell">9</div>
+        <div class="calendar-cell">10</div>
+        <div class="calendar-cell">11</div>
+        <div class="calendar-cell highlight">12</div>
+        <div class="calendar-cell">13</div>
+        <div class="calendar-cell">14</div>
+        <div class="calendar-cell">15</div>
+        <div class="calendar-cell">16</div>
+        <div class="calendar-cell">17</div>
+        <div class="calendar-cell">18</div>
+        <div class="calendar-cell">19</div>
+        <div class="calendar-cell">20</div>
+        <div class="calendar-cell">21</div>
+        <div class="calendar-cell">22</div>
+        <div class="calendar-cell">23</div>
+        <div class="calendar-cell">24</div>
+        <div class="calendar-cell">25</div>
+        <div class="calendar-cell">26</div>
+        <div class="calendar-cell">27</div>
+        <div class="calendar-cell">28</div>
+        <div class="calendar-cell">29</div>
+        <div class="calendar-cell">30</div>
+        <div class="calendar-cell">31</div>
+      </div>
+    </section>
+    <!-- 카운트다운 -->
+    <section id="countdown">
+      <div class="countdown-box">
+        <div class="count"><span id="days">0</span><small>Day</small></div>
+        <div class="count"><span id="hours">00</span><small>Hour</small></div>
+        <div class="count"><span id="minutes">00</span><small>Minute</small></div>
+        <div class="count"><span id="seconds">00</span><small>Seconds</small></div>
+      </div>
+    </section>
+    <!-- 갤러리 -->
+    <section id="gallery">
+      <div class="gallery-header">
+        <h1 class="gallery-header-title">Gallery</h1>
+      </div>
+      <div class="gallery-grid">
+        <img src="images/g1.jpg" alt="갤러리 이미지1" class="gallery-img" />
+        <img src="images/g2.jpg" alt="갤러리 이미지2" class="gallery-img" />
+        <img src="images/g3.jpg" alt="갤러리 이미지3" class="gallery-img" />
+        <img src="images/g4.jpg" alt="갤러리 이미지4" class="gallery-img" />
+        <img src="images/g5.jpg" alt="갤러리 이미지5" class="gallery-img" hidden="true"/>
+        <img src="images/g6.jpg" alt="갤러리 이미지6" class="gallery-img" hidden="true"/>
+        <img src="images/g7.jpg" alt="갤러리 이미지7" class="gallery-img" hidden="true"/>
+        <img src="images/g8.jpg" alt="갤러리 이미지8" class="gallery-img" hidden="true"/>
+        <img src="images/g9.jpg" alt="갤러리 이미지9" class="gallery-img" hidden="true"/>
+        <img src="images/g10.jpg" alt="갤러리 이미지10" class="gallery-img" hidden="true"/>
+      </div>
+    </section>
+    <!-- 네이버 지도 -->
+    <section id="map">
+      <div class="map-header">
+        <h1 class="map-header-title">Map</h1>
+      </div>
+      <div id="naver-map" style="width:100%;height:300px;border-radius:16px;overflow:hidden;margin:32px 0;"></div>
+      <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=snikmouvl0"></script>
+      <div class="map-description">
+        <div class="map-description-group">
+          <p class="map-description-title" id="place"></p>
+          <p class="map-description-content" id="location"></p>
+          <p class="map-description-content">TEL 02-501-7000</p>
+        </div>
+        <div class="map-description-group">
+          <p class="map-description-title" id="subway""></p>
+          <p class="map-description-content" id="subway-description">/p>
+        </div>
+        <div class="map-description-group">
+          <p class="map-description-title" id="bus"></p>
+          <p class="map-description-content" id="bus-station"></p>
+          <p class="map-description-content">146, 333, 341, 740, 1700, 2000, 8001, 9414, N13, N61</p>
+        </div>
+      </div>
+    </section>
+    <!-- 갤러리 확대 뷰어 -->
+    <div id="gallery-viewer" class="hidden">
+      <div id="gallery-dim"></div>
+      <div class="gallery-viewer-content">
+        <button id="gallery-prev" class="gallery-nav">&#8592;</button>
+        <img id="gallery-large-img" src="" alt="확대 이미지" />
+        <button id="gallery-next" class="gallery-nav">&#8594;</button>
+      </div>
+      <button id="gallery-close">&times;</button>
+    </div>
+    <!-- URL 복사 -->
+    <section id="copy-url">
+      <button id="copy-btn"></button>
+    </section>
+    <div id="toast"></div>
+  </div>
+  <!-- 유튜브 BGM 플레이어 -->
+  <div id="bgm-player" style="display: none;"></div>
+  <script src="script.js"></script>
+  <button id="bgm-toggle">
+    <img id="bgm-toggle-icon" src="images/megaphone_off.svg" alt="배경음악 컨트롤러"/>
+  </button>
+</body>
+</html>
