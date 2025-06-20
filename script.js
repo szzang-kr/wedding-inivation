@@ -27,10 +27,6 @@ const texts = {
     "ko": "그 첫 자리에 함께해 주세요.",
     "ja": "その最初の場にぜひお越しください。"
   },
-  "date": {
-    "ko": "2025. 10. 12 SUN",
-    "ja": "2025年 10月 12日 日曜日"
-  },
   "time": {
     "ko": "14:00 PM",
     "ja": "14:00 PM"
@@ -104,7 +100,6 @@ function renderTexts() {
   document.getElementById('intro_3').textContent = texts.intro_3[lang];
   document.getElementById('intro_4').textContent = texts.intro_4[lang];
   document.getElementById('intro_5').textContent = texts.intro_5[lang];
-  document.getElementById('date').textContent = texts.date[lang];
   document.getElementById('groom_name_title').textContent = texts.groom_name_title[lang];
   document.getElementById('groom_name').textContent = texts.groom_name[lang];
   document.getElementById('bride_name_title').textContent = texts.bride_name_title[lang];
@@ -314,6 +309,19 @@ function onPlayerReady() {
       btn.src = 'images/megaphone_on.svg';
     }
     isPlaying = !isPlaying;
+  });
+}
+
+function initMap() {
+  new naver.maps.Map('naver-map', {
+    center: new naver.maps.LatLng(37.504409, 127.049780),
+    zoom: 16,
+    minZoom: 16,
+    maxZoom: 16,
+    zoomControl: false,
+    draggable: false,
+    scrollWheel: false,
+    disableDoubleClickZoom: true
   });
 }
 

@@ -29,21 +29,6 @@ section {
   background: none;
   border-bottom: none;
 }
-.date-row {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.date-row span {
-  font-family: "Pretendard";
-  font-weight: 200;
-  font-size: 1.5em;
-}
-
 #intro {
   position: relative;
 }
@@ -102,8 +87,8 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  margin-top: 10px;
   padding-top: 20px;
+  padding-bottom: 60px;
 }
 .gallery-header h1 {
   font-size: 2rem;
@@ -113,7 +98,6 @@ section {
 }
 #gallery img {
   width: 100%;
-  border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(255,111,97,0.07);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -169,12 +153,12 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background: none;
 }
 #gallery-large-img {
-  max-width: 80vw;
+  max-width: 95vw;
   max-height: 70vh;
-  border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.25);
   background: #fff;
 }
@@ -191,6 +175,9 @@ section {
   z-index: 3;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   transition: background 0.2s;
+}
+#gallery-navigation {
+  padding-top: 20px;
 }
 #gallery-close {
   position: absolute;
@@ -235,7 +222,7 @@ section {
 }
 #calendar {
   text-align: center;
-  padding: 32px 0 24px 0;
+  padding: 32px 0 4px 0;
   background: #ffffff;
 }
 .calendar-month {
@@ -275,9 +262,9 @@ section {
   border-radius: 8px;
   width: 40px;
   height: 40px;
-  font-size: 1.4em;
+  font-size: 1.1em;
   color: #222;
-  font-weight: 100;
+  font-weight: 200;
   font-family: "Pretendard";
   display: flex;
   align-items: center;
@@ -311,24 +298,17 @@ section {
   font-size: 2rem;
   font-family: "Castoro Titling", cursive;
   text-align: center;
-  margin: 12px;
+  margin: 12px 0px 0px 4px;
   padding-top: 20px;
 }
 .calendar-header-date {
   font-family: "Pretendard";
   font-weight: 200;
-  font-size: 1.5em;
-  margin: 12px 0px 0px;
-}
-.calendar-header-time {
-  font-family: "Pretendard";
-  font-weight: 200;
-  font-size: 1.2em;
-  margin: 10px 0px 0px;
+  font-size: 1.05em;
 }
 #countdown {
   text-align: center;
-  padding: 20px 20px 24px 20px;
+  padding: 20px 20px 54px 20px;
   background: #ffffff;
 }
 .countdown-box {
@@ -454,8 +434,8 @@ section {
   }
   
   #gallery-large-img {
-    max-width: 80vw;
-    max-height: 60vh;
+    max-width: 95vw;
+    max-height: 70vh;
   }
   #gallery-close {
     top: 12px;
@@ -476,7 +456,7 @@ section {
 }
 .cover-img {
   width: 100%;
-  height: 1100px; /* 높이를 여기서 수정 */
+  height: 500px; /* 높이를 여기서 수정 */
   max-width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
@@ -484,7 +464,14 @@ section {
   box-shadow: 0 8px 24px rgba(0,0,0,0.10);
 }
 .intro-img {
-  width: 240px;
-  height: 100px;
+  width: 150px;
+  height: 80px;
   padding-bottom: 25px;
+}
+#map {
+  padding: 20px 0px;
+  background: #fff;
+}
+#copy-url {
+  background: #fff;
 }
